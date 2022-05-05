@@ -1,0 +1,359 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+.font-family-poppins {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+.font-family-montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.header {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  margin-bottom: 200px;
+  background: url(../img/bg-header.jpg), #1c1c1c;
+  background-blend-mode: overlay;
+  background-attachment: fixed;
+}
+
+.header .header__titulo {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .header__titulo h1 {
+  color: white;
+  font-size: 6rem;
+  line-height: 100px;
+  text-align: center;
+  letter-spacing: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .header .header__titulo h1 {
+    font-size: 4.5rem;
+    line-height: 75px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .header .header__titulo h1 {
+    font-size: 7.5vw;
+    line-height: 30px;
+  }
+}
+
+.header .header__imagen {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: url(../img/foto-sobremi.jpg);
+  background-position: center top;
+  background-blend-mode: overlay;
+  background-size: cover;
+  opacity: 0.95;
+  -webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.527);
+          box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.527);
+  position: absolute;
+  bottom: -150px;
+  right: 0;
+  left: 0;
+}
+
+.container__principal {
+  width: 80%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  .container__principal {
+    width: 95%;
+  }
+}
+
+.container__principal .contenedor__sobre-mi {
+  width: 100%;
+  min-height: 400px;
+}
+
+.container__principal .contenedor__sobre-mi .sobre-mi__text p {
+  line-height: 33px;
+  text-align: center;
+}
+
+.container__principal .contenedor__sobre-mi .sobre-mi__habilidades {
+  width: 100%;
+  min-height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .container__principal .contenedor__sobre-mi .sobre-mi__habilidades {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container__principal .contenedor__sobre-mi .sobre-mi__habilidades .habilidades__icon-item {
+    margin: 30px 0px;
+  }
+  .container__principal .contenedor__sobre-mi .sobre-mi__habilidades .habilidades__icon-item img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.proyectos__titulo {
+  margin: 40px 0px;
+}
+
+.proyectos__titulo h3 {
+  font-size: 3rem;
+}
+
+.container__proyectos {
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  margin-bottom: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.loopstudio {
+  background-image: url(../img/proyectos/loopstudios-landing-page.png);
+}
+
+.nft-card {
+  background-image: url(../img/proyectos/nft-card.jpg);
+}
+
+.card__proyecto {
+  width: clamp(500px, 100px, 500px);
+  height: 400px;
+  background-color: blueviolet;
+  position: relative;
+  background-position: center center;
+  background-size: cover;
+  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.502);
+          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.502);
+  border-radius: 2px;
+  overflow-y: hidden;
+  -webkit-transition: ease-in-out 1s;
+  transition: ease-in-out 1s;
+}
+
+.card__proyecto .card-body {
+  width: 100%;
+  height: 50px;
+  background-color: #373737;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  color: black;
+  position: absolute;
+  bottom: -100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-transition: ease-in-out 1s;
+  transition: ease-in-out 1s;
+}
+
+.card__proyecto .card-body .card-title {
+  font-size: 13px;
+}
+
+.card__proyecto .card-body .card-title a {
+  color: white;
+  text-decoration: none;
+  -webkit-transition: color ease-in-out .3s;
+  transition: color ease-in-out .3s;
+}
+
+.card__proyecto .card-body .card-title a:hover {
+  color: #a55fe7;
+  -webkit-transition: color ease-in-out .3s;
+  transition: color ease-in-out .3s;
+}
+
+.card__proyecto:hover {
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+  -webkit-transition: ease-in-out 1s;
+  transition: ease-in-out 1s;
+  cursor: pointer;
+}
+
+.card__proyecto:hover .card-body {
+  bottom: 0px;
+  -webkit-transition: ease-in-out 1s;
+  transition: ease-in-out 1s;
+}
+
+@media screen and (max-width: 1024px) {
+  .container__proyectos {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .container__proyectos .card__proyecto {
+    width: clamp(350px, 100px, 500px);
+    margin-bottom: 100px;
+  }
+}
+
+/* Trancicion de 1s para el cambio de color de fondo */
+body {
+  -webkit-transition: cubic-bezier(0.55, 0.085, 0.68, 0.53) 1s;
+  transition: cubic-bezier(0.55, 0.085, 0.68, 0.53) 1s;
+}
+
+/* Cambiar colores de todos los elementos tipo texto */
+.bk-dark p,
+.bk-dark h1,
+.bk-dark h2,
+.bk-dark h3 {
+  color: #fff !important;
+}
+
+/* Fondo Oscuro y trancicion de .5s para el cambio de color de fondo */
+.bk-dark {
+  background-color: #373737 !important;
+  -webkit-transition: cubic-bezier(0.55, 0.085, 0.68, 0.53) 0.5s;
+  transition: cubic-bezier(0.55, 0.085, 0.68, 0.53) 0.5s;
+}
+
+/* Sombra al contenedor de .activate-dark-mode */
+.bk-dark > .activate-dark-mode {
+  -webkit-box-shadow: 0px 0px 20px #cecece5d;
+          box-shadow: 0px 0px 20px #cecece5d;
+}
+
+.bk-dark .card__proyecto {
+  -webkit-box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.25) !important;
+          box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.25) !important;
+}
+
+/* Ocultar icono */
+.disable {
+  display: none;
+  -webkit-transition: cubic-bezier(0.55, 0.085, 0.68, 0.53) 0.5s;
+  transition: cubic-bezier(0.55, 0.085, 0.68, 0.53) 0.5s;
+}
+
+/* Estilos caja btn modo oscuro */
+.activate-dark-mode {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: blueviolet;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  bottom: 50px;
+  left: 30px;
+  -webkit-box-shadow: 0px 0px 20px #1a1a1a98;
+          box-shadow: 0px 0px 20px #1a1a1a98;
+}
+
+/* Estilos al icono de la caja*/
+.activate-dark-mode > a i {
+  color: #fff;
+}
+
+footer {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  background-color: black;
+  margin-top: 100px;
+}
+
+footer .footer__copyright {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .footer__copyright p {
+  text-align: center;
+  color: white;
+}
+
+footer .footer__copyright p a {
+  text-decoration: none;
+  color: blueviolet;
+}
+/*# sourceMappingURL=style.css.map */

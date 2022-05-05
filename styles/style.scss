@@ -1,0 +1,290 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+// Code => font-family: 'Poppins', sans-serif; => Font-weight: 700;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+// Code => font-family: 'Montserrat', sans-serif; => Font-weight: 400;
+
+.font-family-poppins {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+.font-family-montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
+// Mixin
+@mixin flexColumn {
+  @media screen and (max-width: 768px) {
+    & {
+      width: 100%;
+      flex-direction: column;
+    }
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  overflow-x: hidden;
+}
+
+.header {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  margin-bottom: 200px;
+  background: url(../img/bg-header.jpg) ,#1c1c1c;
+  background-blend-mode: overlay;
+  background-attachment: fixed;
+  .header__titulo {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      color: white;
+      font-size: 6rem;
+      line-height: 100px;
+      text-align: center;
+      letter-spacing: 10px;
+      @media screen and (max-width: 768px) {
+        font-size: 4.5rem;
+        line-height: 75px;
+      }
+      @media screen and (max-width: 425px) {
+        font-size: 7.5vw;
+        line-height: 30px;
+      }
+    }
+  }
+  .header__imagen {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: url(../img/foto-sobremi.jpg);
+    background-position: center top;
+    background-blend-mode: overlay;
+    background-size: cover;
+    opacity: 0.95;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.527);
+    position: absolute;
+    bottom: -150px;
+    right: 0;
+    left: 0;
+  }
+}
+
+
+.container__principal {
+  width: 80%;
+  height: max-content;
+  margin: 0 auto;
+  @media screen and (max-width: 768px) {
+    width: 95%;
+  }
+  .contenedor__sobre-mi {
+    width: 100%;
+    min-height: 400px;
+    .sobre-mi__text {
+      p {
+        line-height: 33px;
+        text-align: center;
+      }
+    }
+    .sobre-mi__habilidades {
+      width: 100%;
+      min-height: 150px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-items: center;
+      @media screen and (max-width: 768px) {
+        & {
+          flex-direction: column;
+          .habilidades__icon-item {
+            margin: 30px 0px;
+            img {
+              width: 100px;
+              height: 100px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Section Proyectos
+
+.proyectos__titulo{
+  margin: 40px 0px;
+  h3{
+    font-size: 3rem;
+  }
+}
+
+.container__proyectos{
+  width: 100%;
+  height: max-content;
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin:  0 auto;
+}
+.loopstudio{
+  background-image: url(../img/proyectos/loopstudios-landing-page.png);
+}
+.nft-card{
+  background-image: url(../img/proyectos/nft-card.jpg);
+}
+
+.card__proyecto{
+  width: clamp(500px,100px, 500px);
+  height: 400px;
+  background-color: blueviolet;
+  position: relative;
+  background-position: center center;
+  background-size: cover;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.502);
+  border-radius: 2px;
+  overflow-y: hidden;
+  transition: ease-in-out 1s;
+    .card-body{
+      width: 100%;
+      height: 50px;
+      background-color: #373737;
+      border-bottom-left-radius: 2px;
+      border-bottom-right-radius: 2px;
+      color: black;
+      position: absolute;
+      bottom: -100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      transition: ease-in-out 1s;
+        .card-title{
+          font-size: 13px;
+            a{
+              color: white;
+              text-decoration: none;
+              transition:  color ease-in-out .3s;
+                &:hover{
+                  color: rgb(165, 95, 231);
+                  transition:  color ease-in-out .3s;
+                }
+            }
+        }
+    }
+}
+
+.card__proyecto:hover{
+  transform: translateY(-20px);
+  transition: ease-in-out 1s;
+  cursor: pointer;
+  .card-body{
+    bottom:  0px;
+    transition: ease-in-out 1s;
+  }
+}
+
+
+@media screen and (max-width: 1024px) {
+  
+  .container__proyectos{
+    justify-content: center;
+    .card__proyecto{
+      width: clamp(350px,100px, 500px);
+      margin-bottom: 100px;
+    }
+  }
+
+}
+// Modo Noche y Modo Dia
+
+
+
+/* Trancicion de 1s para el cambio de color de fondo */
+body{
+  transition: cubic-bezier(0.55, 0.085, 0.68, 0.53) 1s;
+} 
+
+/* Cambiar colores de todos los elementos tipo texto */
+.bk-dark p,
+.bk-dark h1,
+.bk-dark h2,
+.bk-dark h3{
+  color: #fff !important;
+}
+/* Fondo Oscuro y trancicion de .5s para el cambio de color de fondo */
+.bk-dark{
+  background-color: #373737 !important;
+  transition: cubic-bezier(0.55, 0.085, 0.68, 0.53) .5s;
+} 
+/* Sombra al contenedor de .activate-dark-mode */
+.bk-dark > .activate-dark-mode{
+  box-shadow: 0px 0px 20px #cecece5d;
+}
+.bk-dark .card__proyecto{
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.25) !important;
+}
+/* Ocultar icono */
+.disable{
+  display: none;
+  transition: cubic-bezier(0.55, 0.085, 0.68, 0.53) .5s;
+}
+/* Estilos caja btn modo oscuro */
+.activate-dark-mode{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: blueviolet;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 50px;
+  left: 30px;
+  box-shadow: 0px 0px 20px #1a1a1a98;
+}
+/* Estilos al icono de la caja*/
+.activate-dark-mode > a i{
+  color: #fff;
+}
+
+
+
+
+
+footer{
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  background-color: black;
+  margin-top: 100px;
+  .footer__copyright{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p{
+      text-align: center;
+      color: white;
+      a{
+        text-decoration: none;
+        color: blueviolet;
+      }
+    }
+
+  }
+}
