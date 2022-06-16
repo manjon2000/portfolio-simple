@@ -174,10 +174,16 @@ body {
   background-image: url(../img/proyectos/nft-card.jpg);
 }
 
+.conciertos-laravel {
+  background-image: url(../img/proyectos/conciertos-laravel.png);
+  background-position: left right !important;
+}
+
 .card__proyecto {
   width: clamp(500px, 100px, 500px);
   height: 400px;
   background-color: blueviolet;
+  margin-bottom: 60px;
   position: relative;
   background-position: center center;
   background-size: cover;
@@ -249,13 +255,24 @@ body {
 
 @media screen and (max-width: 1024px) {
   .container__proyectos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .container__proyectos .card__proyecto {
+    width: clamp(150px, 100px) !important;
+    margin-bottom: 100px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container__proyectos {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-  }
-  .container__proyectos .card__proyecto {
-    width: clamp(350px, 100px, 500px);
-    margin-bottom: 100px;
   }
 }
 
